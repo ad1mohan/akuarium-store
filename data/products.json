@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "CO2 Diffuser Pro",
+    "price": 499,
+    "category": "CO2",
+    "images": [
+      "assets/products/product-1/img1.jpg",
+      "assets/products/product-1/img2.jpg"
+    ],
+    "description": "Premium ceramic CO2 diffuser for planted tanks. Ultra-fine mist output."
+  },
+  {
+    "id": 2,
+    "name": "Aquascape Substrate",
+    "price": 799,
+    "category": "Substrate",
+    "images": [
+      "assets/products/product-2/img1.jpg"
+    ],
+    "description": "Nutrient-rich substrate for lush plant growth."
+  },
+  {
+    "id": 3,
+    "name": "LED Plant Light",
+    "price": 1299,
+    "category": "Lighting",
+    "images": [
+      "assets/products/product-3/img1.jpg"
+    ],
+    "description": "Full spectrum LED for freshwater planted aquariums."
+  },
+  {
+    "id": 4,
+    "name": "Nano Filter",
+    "price": 649,
+    "category": "Filtration",
+    "images": [
+      "assets/products/product-4/img1.jpg"
+    ],
+    "description": "Silent sponge filter for nano tanks up to 30L."
+  }
+]
