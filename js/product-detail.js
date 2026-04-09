@@ -16,6 +16,7 @@ function buildDetailWhatsAppLink(name, price) {
 
   const params = new URLSearchParams(window.location.search);
   const productId = Number(params.get('id'));
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -27,15 +28,64 @@ function buildDetailWhatsAppLink(name, price) {
     container.innerHTML = '<p class="empty-state">Product not found.</p>';
   }
 
+  function imageExists(url) {
+    return new Promise(function (resolve) {
+      const image = new Image();
+
+      image.onload = function () {
+        resolve(true);
+      };
+
+      image.onerror = function () {
+        resolve(false);
+      };
+
+      image.src = url;
+    });
+  }
+
+  async function collectProductImages(product) {
+    const fallbackImages = product.images && product.images.length
+      ? product.images.slice()
+      : ['assets/products/product-1/img1.jpg'];
+    const firstImage = fallbackImages[0];
+    const imagePattern = firstImage.match(/^(.*\/img)(\d+)(\.[^.]+)$/i);
+
+    if (!imagePattern) {
+      return fallbackImages;
+    }
+
+    const basePath = imagePattern[1];
+    const extension = imagePattern[3];
+    const discoveredImages = [];
+    const maxImages = 30;
+
+    for (let imageIndex = 1; imageIndex <= maxImages; imageIndex += 1) {
+      const candidate = basePath + imageIndex + extension;
+      const exists = await imageExists(candidate);
+
+      if (!exists) {
+        break;
+      }
+
+      discoveredImages.push(candidate);
+    }
+
+    return discoveredImages.length ? discoveredImages : fallbackImages;
+  }
+
   function renderProduct(product) {
     const images = product.images && product.images.length ? product.images : ['assets/products/product-1/img1.jpg'];
+    const browseHint = images.length > 1
+      ? (isTouchDevice ? 'Swipe to browse' : 'Click thumbnails to browse')
+      : '';
 
     container.innerHTML = `
       <div class="detail-layout fade-in">
         <div class="detail-gallery">
           <div class="detail-main-image" id="detail-main-image">
             <img id="detail-main-photo" src="${images[0]}" alt="${product.name}">
-            <span class="detail-swipe-hint">Swipe to browse</span>
+            ${browseHint ? '<span class="detail-swipe-hint">' + browseHint + '</span>' : ''}
           </div>
           <div class="thumbnail-row" id="thumbnail-row">
             ${images.map(function (image, index) {
@@ -116,7 +166,7 @@ function buildDetailWhatsAppLink(name, price) {
       }
       return response.json();
     })
-    .then(function (products) {
+    .then(async function (products) {
       const product = products.find(function (item) {
         return Number(item.id) === productId;
       });
@@ -126,7 +176,8 @@ function buildDetailWhatsAppLink(name, price) {
         return;
       }
 
-      renderProduct(product);
+      const galleryImages = await collectProductImages(product);
+      renderProduct(Object.assign({}, product, { images: galleryImages }));
     })
     .catch(function () {
       container.innerHTML = '<p class="empty-state">Unable to load this product right now.</p>';
