@@ -248,6 +248,19 @@ main {
   text-align: center;
 }
 
+.hero-panel > p,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-panel > p.content-visible,
+.hero-actions.content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-panel {
   max-width: 760px;
   margin: 0 auto;
@@ -265,6 +278,12 @@ main {
   width: min(92vw, 760px);
   height: auto;
   filter: drop-shadow(0 20px 40px rgba(73, 172, 224, 0.18));
+  opacity: 0;
+  transition: opacity 0.8s ease;
+
+}
+.hero-logo-animated.is-visible {
+  opacity: 1;
 }
 
 .hero p {
@@ -707,6 +726,7 @@ main {
 }
 
 @media (min-width: 480px) {
+
   .article-grid,
   .video-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
