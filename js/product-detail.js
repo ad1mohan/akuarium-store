@@ -1,4 +1,4 @@
-const DETAIL_WHATSAPP_NUMBER = '919999999999';
+const DETAIL_WHATSAPP_NUMBER = '919304166649';
 
 function buildDetailWhatsAppLink(name, price) {
   const message = encodeURIComponent(

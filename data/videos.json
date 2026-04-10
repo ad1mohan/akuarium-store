@@ -1,8 +1,25 @@
 [
-  { "id": 1, "title": "Aquascape Tutorial for Beginners", "youtubeId": "dQw4w9WgXcQ" },
-  { "id": 2, "title": "CO2 Setup Guide", "youtubeId": "dQw4w9WgXcQ" },
-  { "id": 3, "title": "Best Plants for Low Light", "youtubeId": "dQw4w9WgXcQ" },
-  { "id": 4, "title": "Shrimp Tank Setup", "youtubeId": "dQw4w9WgXcQ" },
-  { "id": 5, "title": "Aquarium Water Chemistry", "youtubeId": "dQw4w9WgXcQ" },
-  { "id": 6, "title": "DIY Aquascape Hardscape", "youtubeId": "dQw4w9WgXcQ" }
+  {
+    "id": 1,
+    "title": "BUILDING EMBER VALLEY | Step-by-Step Aquascape Setup",
+    "youtubeId": "_ByLgtnYPoA",
+    "thumbnail": "https://img.youtube.com/vi/_ByLgtnYPoA/maxresdefault.jpg",
+    "duration": "7:17",
+    "views": 884,
+    "published": "1 month ago",
+    "category": "Aquascaping",
+    "description": "Complete step-by-step aquascape build of Ember Valley. Covers layout planning, hardscape placement, substrate setup, and planting techniques for beginners."
+  },
+  {
+    "id": 2,
+    "title": "Verdant | Episode 1 | The Beginning of My 90P Aquascaping Journey",
+    "youtubeId": "Gm3DrZMH6zg",
+    "thumbnail": "https://img.youtube.com/vi/_ByLgtnYPoA/maxresdefault.jpg",
+    "duration": "",
+    "views": 301,
+    "published": "2 months ago",
+    "category": "Aquascaping Series",
+    "description": "Episode 1 of the Verdant aquascaping series. Follow the journey of setting up a 90P planted aquarium from scratch, including planning, equipment selection, and initial layout."
+  }
 ]
+

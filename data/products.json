@@ -1,44 +1,42 @@
 [
   {
     "id": 1,
-    "name": "CO2 Diffuser Pro",
+    "name": "CO2 Diffuser Bazooka (External Type)",
     "price": 499,
     "category": "CO2",
     "images": [
-      "assets/products/product-1/img1.jpg",
-      "assets/products/product-1/img2.jpg",
-      "assets/products/product-1/img3.jpg"
+      "assets/products/product-1/img1.jpg"
     ],
-    "description": "Premium ceramic CO2 diffuser for planted tanks. Ultra-fine mist output."
+    "description": "High-efficiency external CO2 diffuser (bazooka type) designed for planted aquariums. Produces ultra-fine micro bubbles for maximum CO2 dissolution. Ideal for use with canister filters. Suitable for tanks 60–200 liters. Durable acrylic body with replaceable ceramic media."
   },
   {
     "id": 2,
-    "name": "Aquascape Substrate",
-    "price": 799,
+    "name": "Platinum Aquasoil 9L (Planted & Shrimp Aquarium Soil)",
+    "price": 2199,
     "category": "Substrate",
     "images": [
       "assets/products/product-2/img1.jpg"
     ],
-    "description": "Nutrient-rich substrate for lush plant growth."
+    "description": "Premium nutrient-rich aquasoil designed for planted and shrimp aquariums. Helps maintain stable pH, promotes strong root development, and enhances plant growth. Improves water clarity and supports beneficial bacteria. Ready to use, no rinsing required. Suitable for carpeting plants and aquascaping layouts."
   },
   {
     "id": 3,
-    "name": "LED Plant Light",
-    "price": 1299,
+    "name": "LEDSTAR AQZ-3 Aquarium LED Light",
+    "price": 30499,
     "category": "Lighting",
     "images": [
       "assets/products/product-3/img1.jpg"
     ],
-    "description": "Full spectrum LED for freshwater planted aquariums."
+    "description": "Slim aluminum body full-spectrum LED light designed for planted aquariums. Provides optimal PAR output for healthy plant growth while enhancing fish coloration. Minimalist stand design fits most rimless tanks. Energy-efficient, low heat, and long lifespan LEDs. Ideal for nano to mid-size aquariums."
   },
   {
     "id": 4,
-    "name": "Nano Filter",
-    "price": 649,
+    "name": "Cube One Mini Hang-On Filter (250 L/H)",
+    "price": 599,
     "category": "Filtration",
     "images": [
       "assets/products/product-4/img1.jpg"
     ],
-    "description": "Silent sponge filter for nano tanks up to 30L."
+    "description": "Compact hang-on-back (HOB) filter perfect for nano aquariums up to 30–35 cm. Flow rate of 250 L/H ensures efficient mechanical and biological filtration. Features adjustable flow control, quiet operation, and waterfall outlet for oxygenation. USB powered (DC 5V) with IPX8 waterproof rating. Ideal for betta, shrimp, and nano planted tanks."
   }
 ]

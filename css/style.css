@@ -429,6 +429,10 @@ main {
   justify-content: space-between;
   gap: 12px;
 }
+.product-meta > div {
+  min-width: 0;         
+  flex: 1;
+}
 
 .product-meta h3 {
   font-size: 1.02rem;
@@ -438,6 +442,7 @@ main {
   color: var(--secondary);
   font-weight: 700;
   white-space: nowrap;
+  flex-shrink: 0;        
 }
 
 .product-description {
@@ -450,6 +455,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;       
 }
 
 .product-category {
@@ -790,5 +796,24 @@ main {
 
   .article-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 479px) {
+
+  /* single column — cards get full width instead of ~98px content area */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* stack label above button, button stretches full width */
+  .product-card .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-card .card-actions .btn-whatsapp {
+    justify-content: center;
+    width: 100%;
   }
 }
